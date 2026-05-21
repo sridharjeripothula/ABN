@@ -496,6 +496,161 @@
             display: block;
         }
 
+        /* ============================================
+           RIGHTS ALERT SECTION — SC/ST Atrocity
+           ============================================ */
+        .rights-alert-section {
+            background: #fff8f0;
+            border-top: 3px solid #e65100;
+            border-bottom: 3px solid #e65100;
+            padding: 22px 40px;
+            text-align: center;
+        }
+        .rights-alert-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .rights-banner-wrap { display: inline-block; width: 100%; }
+        .rights-banner-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            background: #fff3e0;
+            color: #b84300;
+            border: 2px solid #e65100;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.97rem;
+            cursor: pointer;
+            font-family: 'Noto Sans', sans-serif;
+            transition: all 0.3s;
+            text-align: left;
+            line-height: 1.5;
+            width: 100%;
+            max-width: 820px;
+        }
+        .rights-banner-btn:hover {
+            background: #ffe0b2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 81, 0, 0.2);
+        }
+        .rights-alert-icon { font-size: 1.4rem; flex-shrink: 0; }
+        .rights-alert-text { flex: 1; }
+        .rights-alert-text strong { display: block; font-size: 1.08rem; margin-bottom: 4px; }
+        .rights-alert-text span { font-weight: 700; font-size: 1rem; color: #b84300; }
+        .rights-panel-outer {
+            display: none;
+            margin-top: 16px;
+            text-align: left;
+        }
+        .rights-banner-wrap.open .rights-panel-outer { display: block; }
+        .rights-panel {
+            background: #ffffff;
+            border: 1px solid #e0cfc0;
+            border-left: 5px solid #e65100;
+            border-radius: 8px;
+            padding: 28px 32px;
+            box-shadow: 0 6px 20px rgba(230, 81, 0, 0.08);
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .rights-panel h2 {
+            font-family: 'Cinzel', serif;
+            color: #b84300;
+            font-size: 1.3rem;
+            margin-bottom: 22px;
+            text-align: center;
+            border-bottom: 2px solid #f5c6a0;
+            padding-bottom: 12px;
+        }
+        .rights-panel h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--blue-deepest);
+            font-size: 1rem;
+            margin: 22px 0 8px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 4px;
+        }
+        .rights-panel h4 {
+            color: var(--blue-primary);
+            font-size: 0.93rem;
+            margin: 12px 0 5px;
+            font-weight: 700;
+        }
+        .rights-panel ul, .rights-panel ol {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .rights-panel ul li, .rights-panel ol li { margin-bottom: 5px; }
+        .rights-panel .rights-step {
+            background: var(--bg-light-blue);
+            border-left: 4px solid var(--blue-primary);
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .rights-panel .rights-step h3 {
+            border-bottom: none;
+            margin-top: 0;
+            padding-bottom: 0;
+            font-size: 0.97rem;
+            color: var(--blue-deepest);
+        }
+        .rights-panel .rights-note {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-left: 4px solid #f9a825;
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+        .rights-panel .rights-note h3 {
+            color: #7c5700;
+            border-bottom: none;
+            margin-top: 0;
+            padding-bottom: 0;
+            font-size: 0.97rem;
+        }
+        .rights-sources {
+            background: var(--bg-light-blue);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--blue-primary);
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+        .rights-sources h3 {
+            color: var(--blue-deepest);
+            border-bottom: none;
+            margin-top: 0;
+            padding-bottom: 0;
+            font-size: 0.97rem;
+        }
+        .rights-law-link {
+            color: var(--blue-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .rights-law-link:hover {
+            color: var(--blue-deepest);
+            text-decoration: underline;
+        }
+        .rights-jai {
+            text-align: center;
+            font-weight: 800;
+            color: var(--blue-deepest);
+            margin-top: 18px;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            .rights-alert-section { padding: 16px 16px; }
+            .rights-banner-btn { font-size: 0.88rem; padding: 12px 16px; }
+            .rights-panel { padding: 20px 16px; }
+        }
+
         /* Principles cards */
         .principles-section {
             padding: 80px 40px;
@@ -1531,7 +1686,7 @@
                         Dr. B.R. Ambedkar Youth Club is a community of empowered youth dedicated to the ideals of social justice, equality, and the teachings of Lord Buddha and Babasaheb Ambedkar. We work to educate, unite, and uplift our community.
                     </p>
                     <div class="hero-cta">
-                        <button class="cta-button" type="button" onclick="this.parentElement.classList.toggle('open')">Click for Ambedkar Writings &amp; Speeches</button>
+                        <button class="cta-button" type="button" onclick="this.parentElement.classList.toggle('open')">📜 Ambedkar Writings &amp; Speeches</button>
                         <div class="cta-links">
                             <a href="https://www.mea.gov.in/books-writings-of-ambedkar.htm" target="_blank" rel="noopener noreferrer">📘 MEA — Books &amp; Writings of Ambedkar →</a>
                             <a href="https://baws.in/" target="_blank" rel="noopener noreferrer">📚 BAWS — Babasaheb Ambedkar Writings &amp; Speeches →</a>
@@ -1596,6 +1751,119 @@
                                     <li>I believe that I am having a re-birth.</li>
                                     <li>I solemnly declare and affirm that I shall hereafter lead my life according to the principles and teachings of the Buddha and his Dhamma.</li>
                                 </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SC/ST Rights Alert Banner -->
+            <div class="rights-alert-section">
+                <div class="rights-alert-inner">
+                    <div class="rights-banner-wrap" id="rightsBannerWrap">
+                        <button class="rights-banner-btn" type="button" onclick="document.getElementById('rightsBannerWrap').classList.toggle('open')">
+                            <span class="rights-alert-icon">⚖️</span>
+                            <span class="rights-alert-text">
+                                <strong>Experiencing Caste Discrimination?</strong>
+                                <span>Know your rights &amp; how to file an <span style="white-space:nowrap">SC/ST atrocity complaint →</span></span>
+                            </span>
+                        </button>
+                        <div class="rights-panel-outer">
+                            <div class="rights-panel">
+                                <h2>How to File an SC/ST Atrocity Complaint</h2>
+
+                                <div class="rights-step">
+                                    <h3>Step 1: File an FIR</h3>
+                                    <ul>
+                                        <li>Go to the nearest police station (it does not have to be your local station if you feel unsafe).</li>
+                                        <li>Clearly state that you want to file a case under <strong><a href="https://www.indiacode.nic.in/show-data?actid=AC_CEN_25_35_00002_198933_1517807322896&sectionId=12245&sectionno=3&orderno=3" target="_blank" rel="noopener noreferrer" class="rights-law-link">Section 3 of the SC/ST (Prevention of Atrocities) Act, 1989 ↗</a></strong>.</li>
+                                        <li>Mention that you belong to a Scheduled Caste / Scheduled Tribe and the offence was committed because of your caste identity.</li>
+                                        <li>If you are unaware of the process, get in touch with local Ambedkarites or a well-informed person for proper guidance.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="rights-step">
+                                    <h3>Step 2: If Police Refuse to Register FIR</h3>
+                                    <ul>
+                                        <li>Ask for a written refusal.</li>
+                                        <li>File a complaint with the <strong>Superintendent of Police (SP)</strong> under Section 154(3) CrPC / relevant BNSS provisions.</li>
+                                        <li>Or approach a <strong>Judicial Magistrate</strong> under Section 156(3) CrPC to direct police to register the FIR.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="rights-step">
+                                    <h3>Step 3: Investigation Rights</h3>
+                                    <ul>
+                                        <li>Investigation must be conducted by an officer <strong>not below the rank of DSP</strong>.</li>
+                                        <li>Investigation should generally be completed within <strong>60 days</strong> under SC/ST Rules, 1995.</li>
+                                        <li>Deliberate delay or negligence by officials can itself attract legal action.</li>
+                                    </ul>
+                                </div>
+
+                                <h3>Constitutional &amp; Legal Protections</h3>
+                                <p>The SC/ST PoA Act is supported by:</p>
+                                <ul>
+                                    <li><strong>Article 14</strong> – Equality before law</li>
+                                    <li><strong>Article 15</strong> – Protection against discrimination</li>
+                                    <li><strong>Article 17</strong> – Abolition of untouchability</li>
+                                    <li><strong>Article 21</strong> – Right to life and dignity</li>
+                                    <li><strong>Article 46</strong> – Protection of SC/ST interests</li>
+                                </ul>
+
+                                <h3>Important Amendments</h3>
+                                <h4>2015–2016 Amendments — Added stronger protections including:</h4>
+                                <ul>
+                                    <li>Social boycott &amp; public humiliation</li>
+                                    <li>Land grabbing</li>
+                                    <li>Witness and victim protection</li>
+                                    <li>Faster Special Courts</li>
+                                </ul>
+                                <h4>2018 Amendment — Restored stronger protections:</h4>
+                                <ul>
+                                    <li>No preliminary inquiry needed before FIR</li>
+                                    <li>No prior approval required for arrest</li>
+                                    <li>Restrictions on anticipatory bail under Section 18A</li>
+                                </ul>
+
+                                <h3>Evidence Matters</h3>
+                                <p>To strengthen the case, collect evidence such as:</p>
+                                <ul>
+                                    <li>Voice recordings, videos/photos</li>
+                                    <li>Witness statements</li>
+                                    <li>Social media posts/messages showing caste bias</li>
+                                    <li>Prior incidents or history of discriminatory behaviour</li>
+                                </ul>
+                                <p>Even indirect proof showing caste-based intent or repeated behaviour may help support the case.</p>
+
+                                <h3>Additional Support</h3>
+                                <p>You may also approach:</p>
+                                <ul>
+                                    <li>National Commission for Scheduled Castes</li>
+                                    <li>National Commission for Scheduled Tribes</li>
+                                    <li>Ambedkarite organisations &amp; Dalit rights NGOs</li>
+                                    <li>Media / Social media for awareness and support</li>
+                                </ul>
+
+                                <div class="rights-sources">
+                                    <h3>Read the Original Law</h3>
+                                    <ul>
+                                        <li><a href="https://www.indiacode.nic.in/handle/123456789/1920?locale=en" target="_blank" rel="noopener noreferrer" class="rights-law-link">SC/ST (Prevention of Atrocities) Act, 1989 — India Code (Official) ↗</a></li>
+                                        <li><a href="https://www.indiacode.nic.in/bitstream/123456789/15338/1/scheduled_castes_and_the_scheduled_tribes.pdf" target="_blank" rel="noopener noreferrer" class="rights-law-link">Download Full Act as PDF ↗</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="rights-note">
+                                    <h3>Important Note</h3>
+                                    <ul>
+                                        <li>Do not file false or malicious cases.</li>
+                                        <li>Do not misuse the Act for personal revenge or external influence.</li>
+                                        <li>The law exists to protect genuine victims of caste-based discrimination and atrocities.</li>
+                                        <li>Do not accept requests from upper castes who ask you to file these cases on someone they know to settle their personal grievances. They may lure you with money, but politely decline.</li>
+                                        <li>If you are lacking courage to do this entirely, seek help from Ambedkarite organisations or get in touch with one online. We will stand by you and guide you in the process, end to end.</li>
+                                    </ul>
+                                </div>
+
+                                <p class="rights-jai">Jai Bhim!</p>
                             </div>
                         </div>
                     </div>
