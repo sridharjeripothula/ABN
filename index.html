@@ -711,6 +711,66 @@
             box-shadow: 0 15px 40px rgba(0, 74, 173, 0.12);
         }
 
+        .home-quotes-section {
+            background: #001f5b;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .home-quotes-section h2 {
+            color: #FFD700;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .quote-carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 140px;
+            position: relative;
+        }
+        .quote-slide {
+            display: none;
+            animation: fadeInQuote 0.8s ease;
+        }
+        .quote-slide.active {
+            display: block;
+        }
+        @keyframes fadeInQuote {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .quote-slide blockquote {
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin: 0 0 14px;
+        }
+        .quote-slide cite {
+            color: #FFD700;
+            font-size: 0.9rem;
+            font-style: normal;
+            letter-spacing: 1px;
+        }
+        .quote-dots {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .quote-dots span {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(255,215,0,0.35);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .quote-dots span.active {
+            background: #FFD700;
+        }
+
         .principle-icon {
             font-size: 2.5rem;
             margin-bottom: 20px;
@@ -1664,11 +1724,11 @@
             <ul class="nav-list">
                 <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-page="about">About</a></li>
-                
+
                 <li><a href="#events" class="nav-link" data-page="events">Events</a></li>
                 <li><a href="#gallery" class="nav-link" data-page="gallery">Gallery</a></li>
                 <li><a href="#quotes" class="nav-link" data-page="quotes">Quotes</a></li>
-                
+
                 <li><a href="#resources" class="nav-link" data-page="resources">Books</a></li>
                 
             </ul>
@@ -1906,6 +1966,37 @@
                         <p>Walking the Noble Eightfold Path taught by Lord Buddha — cultivating wisdom, ethical conduct, and mental discipline.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="home-quotes-section">
+                <h2>☸ Words to Live By</h2>
+                <div class="quote-carousel" id="homeQuoteCarousel">
+                    <div class="quote-slide active">
+                        <blockquote>"Be educated. Be organized. Be agitated."</blockquote>
+                        <cite>— Dr. B.R. Ambedkar</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>"I say to the Untouchable: Be a lion! You be your own light — Atta Deep Bhav!"</blockquote>
+                        <cite>— Dr. B.R. Ambedkar, May 1950</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>"I have always held that Knowledge is Power. The Scheduled Castes will not attain their goal of freedom and liberty until they drink deep of all knowledge."</blockquote>
+                        <cite>— Dr. B.R. Ambedkar</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>"Our boys should learn two things: to prove they are inferior to none in intelligence and capacity, and to lead their community to be free, strong and respected."</blockquote>
+                        <cite>— Dr. B.R. Ambedkar</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>"Life should be great rather than long."</blockquote>
+                        <cite>— Dr. B.R. Ambedkar</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <blockquote>"Bhakti in religion may be a road to salvation. But in politics, Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship."</blockquote>
+                        <cite>— Dr. B.R. Ambedkar, Constituent Assembly, November 25, 1949</cite>
+                    </div>
+                </div>
+                <div class="quote-dots" id="homeQuoteDots"></div>
             </div>
         </section>
 
@@ -2215,6 +2306,118 @@
 
                     <div class="event-item">
                         <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"The history of India before the Muslim invasions is the history of a mortal conflict between Bramhanism and Buddhism. Any one who does not recognize these two facts will never be able to write a true history of India."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"The history of India is said to begin with the Aryans who invaded India, made it their home and established their culture."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"Bramhanism acquired by its invasions political power to annihilate Buddhism and it did annihilate Buddhism. Islam did not supplant Hinduism. Islam never made a thorough job of its mission. Bramhanism did. It drove out Buddhism as a religion and occupied its place."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. Bhimrao Ramji Ambedkar — May 1950</div>
+                        <h3>"I say to the Untouchable: Be a lion! Hindus sacrificed goats before the image of Kali. You be your own light — 'Atta Deep Bhav!'"</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-top: 6px;">— As noted by Mulk Raj Anand, author of <em>The Untouchable</em> [<em>'Atta Deep Bhav'</em> (अत्त दीप भव) is a Pali phrase from Buddha meaning "Be your own light"]</p>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Bhakti in religion may be a road to salvation. But in politics, Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"However good a Constitution may be, it is sure to turn out bad because those who are called to work it, happen to be a bad lot. However bad a Constitution may be, it may turn out to be good if those who are called to work it, happen to be a good lot."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"The working of a Constitution does not depend wholly upon the nature of the Constitution."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Independence is no doubt a matter of joy. But let us not forget that this independence has thrown on us great responsibilities. By independence, we have lost the excuse of blaming the British for anything going wrong. If hereafter things go wrong, we will have nobody to blame except ourselves."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"We must be determined to defend our independence with the last drop of our blood."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Will history repeat itself? It is this thought which fills me with anxiety."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"There is danger of democracy giving place to dictatorship."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"It is quite possible for this new born democracy to retain its form but give place to dictatorship in fact."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"These methods of civil disobedience, non-cooperation and satyagraha are nothing but the Grammar of Anarchy and the sooner they are abandoned, the better for us."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Political democracy cannot last unless there lies at the base of it social democracy."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Without fraternity, liberty and equality could not become a natural course of things."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Liberty, equality and fraternity form a union of trinity."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"How can people divided into several thousands of castes be a nation?"</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Will Indians place the country above their creed or will they place creed above country?"</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"In politics we will have equality and in social and economic life we will have inequality."</h3>
+                    </div>
+
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Aurangabad, July 3, 1953</div>
+                        <h3>"I do not believe any other language in India including Hindi can be used instead of English in schools and colleges."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"I have always held that Knowledge is Power in every field of life. The Scheduled Castes will not attain their goal of freedom and liberty until they drink deep of all knowledge."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"Our boys should learn two things. Firstly, to prove that given the opportunities they are inferior to none in intelligence and in capacity. Secondly, to prove that they are not merely to tread the path of personal happiness but to lead their community to be free, to be strong and to be respected."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
                         <h3>"Cultivation of mind should be the ultimate aim of human existence."</h3>
                     </div>
 
@@ -2306,11 +2509,6 @@
                     <div class="event-item">
                         <div class="event-date">Dr. B.R. Ambedkar</div>
                         <h3>"Study, Service and Sacrifice."</h3>
-                    </div>
-
-                    <div class="event-item">
-                        <div class="event-date">Dr. B.R. Ambedkar</div>
-                        <h3>"I have always held that Knowledge is Power in every field of life. The Scheduled Castes will not attain their goal of freedom and liberty until they drink deep of all knowledge."</h3>
                     </div>
 
                     <div class="event-item">
@@ -2453,6 +2651,11 @@
                         <h3>"In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go of things not meant for you."</h3>
                     </div>
 
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar</div>
+                        <h3>"Equality may be a fiction but nonetheless one must accept it as the governing principle."</h3>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -2539,7 +2742,7 @@
              ============================================ -->
         <footer class="site-footer">
             <div class="footer-dhamma" style="font-size: 1.5rem; letter-spacing: 3px;">☸️ ☸️ ☸️</div>
-            <p class="footer-quote" style="color: #FFD700;">"I like the religion that teaches liberty, equality and fraternity."</p>
+            <p class="footer-quote" style="color: #FFD700;">"The history of India is nothing but a history of a mortal conflict between Buddhism and Brahmanism."</p>
             <p class="footer-attribution" style="color: #FFD700;">— Babasaheb Dr. B.R. Ambedkar</p>
             <div class="footer-links">
                 <a href="#" onclick="navigateTo('home')">Home</a>
@@ -2798,6 +3001,32 @@
         document.addEventListener('visibilitychange', function() {
             if (isLightboxOpen()) lbImgVisible(!document.hidden);
         });
+
+        // Home page quote carousel
+        (function() {
+            const slides = document.querySelectorAll('#homeQuoteCarousel .quote-slide');
+            const dotsContainer = document.getElementById('homeQuoteDots');
+            let current = 0, timer;
+
+            slides.forEach(function(_, i) {
+                const dot = document.createElement('span');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', function() { goTo(i); });
+                dotsContainer.appendChild(dot);
+            });
+
+            function goTo(n) {
+                slides[current].classList.remove('active');
+                dotsContainer.children[current].classList.remove('active');
+                current = (n + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dotsContainer.children[current].classList.add('active');
+                clearInterval(timer);
+                timer = setInterval(function() { goTo(current + 1); }, 5000);
+            }
+
+            timer = setInterval(function() { goTo(current + 1); }, 5000);
+        })();
     </script>
 </body>
 </html>
