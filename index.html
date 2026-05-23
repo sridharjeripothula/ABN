@@ -712,63 +712,66 @@
         }
 
         .home-quotes-section {
-            background: #001f5b;
-            padding: 60px 40px;
+            background: #ffffff;
+            padding: 60px 20px;
             text-align: center;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
         }
         .home-quotes-section h2 {
-            color: #FFD700;
+            color: var(--blue-deepest);
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
         .quote-carousel {
             max-width: 800px;
             margin: 0 auto;
-            min-height: 140px;
+            overflow: hidden;
             position: relative;
         }
+        .quote-track {
+            display: flex;
+            transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
         .quote-slide {
-            display: none;
-            animation: fadeInQuote 0.8s ease;
+            min-width: 100%;
+            padding: 0 24px;
+            text-align: center;
+            box-sizing: border-box;
         }
-        .quote-slide.active {
-            display: block;
-        }
-        @keyframes fadeInQuote {
-            from { opacity: 0; transform: translateY(10px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .quote-slide blockquote {
-            color: #fff;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            font-style: italic;
+        .quote-slide p {
+            color: var(--blue-deepest);
+            font-size: 1.25rem;
+            line-height: 1.8;
             margin: 0 0 14px;
+            font-weight: 500;
         }
-        .quote-slide cite {
-            color: #FFD700;
-            font-size: 0.9rem;
-            font-style: normal;
-            letter-spacing: 1px;
+        .quote-slide .quote-attr {
+            color: var(--blue-primary);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            display: block;
+            text-transform: uppercase;
         }
         .quote-dots {
-            margin-top: 24px;
+            margin-top: 28px;
             display: flex;
             justify-content: center;
             gap: 8px;
         }
         .quote-dots span {
-            width: 8px; height: 8px;
+            width: 7px; height: 7px;
             border-radius: 50%;
-            background: rgba(255,215,0,0.35);
+            background: rgba(0, 74, 173, 0.2);
             cursor: pointer;
             transition: background 0.3s;
         }
         .quote-dots span.active {
-            background: #FFD700;
+            background: var(--blue-primary);
         }
 
         .principle-icon {
@@ -1971,29 +1974,31 @@
             <div class="home-quotes-section">
                 <h2>☸ Words to Live By</h2>
                 <div class="quote-carousel" id="homeQuoteCarousel">
-                    <div class="quote-slide active">
-                        <blockquote>"Be educated. Be organized. Be agitated."</blockquote>
-                        <cite>— Dr. B.R. Ambedkar</cite>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"I say to the Untouchable: Be a lion! You be your own light — Atta Deep Bhav!"</blockquote>
-                        <cite>— Dr. B.R. Ambedkar, May 1950</cite>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"I have always held that Knowledge is Power. The Scheduled Castes will not attain their goal of freedom and liberty until they drink deep of all knowledge."</blockquote>
-                        <cite>— Dr. B.R. Ambedkar</cite>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"Our boys should learn two things: to prove they are inferior to none in intelligence and capacity, and to lead their community to be free, strong and respected."</blockquote>
-                        <cite>— Dr. B.R. Ambedkar</cite>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"Life should be great rather than long."</blockquote>
-                        <cite>— Dr. B.R. Ambedkar</cite>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"Bhakti in religion may be a road to salvation. But in politics, Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship."</blockquote>
-                        <cite>— Dr. B.R. Ambedkar, Constituent Assembly, November 25, 1949</cite>
+                    <div class="quote-track" id="homeQuoteTrack">
+                        <div class="quote-slide">
+                            <p>"Study, Service and Sacrifice."</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar</span>
+                        </div>
+                        <div class="quote-slide">
+                            <p>"I say to the Untouchables: Be a lion! Hindus sacrificed goats before the image of Kali. You be your own light — 'Atta Deep Bhav!"</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar, May 1950</span>
+                        </div>
+                        <div class="quote-slide">
+                            <p>"I have always held that Knowledge is Power. The Scheduled Castes will not attain their goal of freedom and liberty until they drink deep of all knowledge."</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar</span>
+                        </div>
+                        <div class="quote-slide">
+                            <p>"Our boys should learn two things: to prove they are inferior to none in intelligence and capacity, and to lead their community to be free, strong and respected."</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar</span>
+                        </div>
+                        <div class="quote-slide">
+                            <p>"Life should be great rather than long."</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar</span>
+                        </div>
+                        <div class="quote-slide">
+                            <p>"Bhakti in religion may be a road to salvation. But in politics, Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship."</p>
+                            <span class="quote-attr">— Dr. B.R. Ambedkar, Constituent Assembly, November 25, 1949</span>
+                        </div>
                     </div>
                 </div>
                 <div class="quote-dots" id="homeQuoteDots"></div>
@@ -2352,7 +2357,22 @@
 
                     <div class="event-item">
                         <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
-                        <h3>"Will history repeat itself? It is this thought which fills me with anxiety."</h3>
+                        <h3>"What perturbs me greatly is the fact that not only India has once before lost her independence, but she lost it by the infidelity and treachery of some of her own people."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Will history repeat itself? It is this thought which fills me with anxiety. This anxiety is deepened by the realization of the fact that in addition to our old enemies in the form of castes and creeds we are going to have many political parties with diverse and opposing political creeds."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"Will Indians place the country above their creed or will they place creed above country? I do not know. But this much is certain that if the parties place creed above country, our independence will be put in jeopardy a second time and probably be lost forever. This eventuality we must all resolutely guard against."</h3>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
+                        <h3>"On the 26th of January 1950, we are going to enter into a life of contradictions. In politics we will have equality and in social and economic life we will have inequality. In politics we will be recognizing the principle of one man one vote and one vote one value. In our social and economic life, we shall, by reason of our social and economic structure, continue to deny the principle of one man one value."</h3>
                     </div>
 
                     <div class="event-item">
@@ -2390,15 +2410,6 @@
                         <h3>"How can people divided into several thousands of castes be a nation?"</h3>
                     </div>
 
-                    <div class="event-item">
-                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
-                        <h3>"Will Indians place the country above their creed or will they place creed above country?"</h3>
-                    </div>
-
-                    <div class="event-item">
-                        <div class="event-date">Dr. B.R. Ambedkar — Constituent Assembly, November 25, 1949</div>
-                        <h3>"In politics we will have equality and in social and economic life we will have inequality."</h3>
-                    </div>
 
 
                     <div class="event-item">
@@ -3004,7 +3015,8 @@
 
         // Home page quote carousel
         (function() {
-            const slides = document.querySelectorAll('#homeQuoteCarousel .quote-slide');
+            const track = document.getElementById('homeQuoteTrack');
+            const slides = track.querySelectorAll('.quote-slide');
             const dotsContainer = document.getElementById('homeQuoteDots');
             let current = 0, timer;
 
@@ -3016,10 +3028,9 @@
             });
 
             function goTo(n) {
-                slides[current].classList.remove('active');
                 dotsContainer.children[current].classList.remove('active');
                 current = (n + slides.length) % slides.length;
-                slides[current].classList.add('active');
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
                 dotsContainer.children[current].classList.add('active');
                 clearInterval(timer);
                 timer = setInterval(function() { goTo(current + 1); }, 5000);
